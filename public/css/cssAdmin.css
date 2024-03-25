@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+body{
+    min-height: 100vh;
+    overflow-y: hidden;
+    }
+.navigation {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    bottom: 15px;
+    width: 5%;
+    box-sizing: border-box;
+    background-color: #4d5bf9;
+    overflow-x: hidden; 
+    border-radius: 5px;
+    transition: 0.4s;
+    scrollbar-width: none; /*ẩn scrollbar trên firefox*/
+}
+.navigation::-webkit-scrollbar {display: none;} 
+.navigation.active{
+    width: 15%;
+    display: block;
+    box-sizing: border-box;
+}
+.navigation ul {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    display: block;
+    left: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.navigation ul li:hover{background-color: #96D7F7;}
+.navigation ul li ul {
+    position:relative;
+    display: none;
+}
+.navigation ul li ul li{
+   
+height: inherit;
+width: 100%;
+line-height: 30px;
+padding-left: 10px;
+}
+.navigation ul li:hover ul {
+        display: inline-block;        
+        position: relative;
+        top:0px;        
+    }
+.navigation ul li ul li:hover{
+        background-color:white;
+        
+        
+}
+.navigation ul li ul li a {
+display: inline;
+margin-left:5px;
+padding-top: 5px;}
+.navigation ul li ul li a span {padding-left: 10px;;}
+.navigation ul li ul li a{
+   /*  color:rgb(67, 67, 228); */
+    color:black;
+    overflow: hidden; /*ẩn nội dung vượt quá khung*/
+    white-space: nowrap; /*Không xuống dòng khi chữ quá dài*/
+}
+
+.navigation ul li a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    text-align: center;
+    min-width: 50px;
+    line-height: 60px;
+}
+.navigation ul li a .icon img{
+    height: 25px;
+    width: 25px;
+
+}
+.icon_sub img {width: 30px;
+    height: 30px;
+    display: inline;
+    
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 50px;
+}
+.content {
+    position: fixed;
+    top:5px;
+    right: 2px;    
+    width: calc(95% - 15px);    
+    box-sizing: border-box;
+    transition: 0.4s;   
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y:auto; 
+}
+.content.active {
+    width: calc(85% - 15px);
+}
+
+.toggle {
+    position: fixed;
+    top:10px;
+    left:10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+   
+}
+.toggle img {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    display: none;
+    
+}
+.toggle img.open,.toggle.active img.close{
+    display: block;
+    left:15%;
+}
+.toggle img.close,.toggle.active img.open{
+    
+    display: none;
+}
+
+.imgbackground {
+    margin-left: 10%;
+    width: 80%;
+    height:calc(100% - 65px) ;
+    margin-top: 50px ;
+}
+.imgbackground img {
+    
+    width: 100%;
+    height: 100%;
+}
+
+

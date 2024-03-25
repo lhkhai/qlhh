@@ -1,0 +1,57 @@
+.tdthaotac {
+    display: block;
+    position: relative;
+}
+.contentDropdown {
+    display:none;
+    position:absolute;
+    width: 150px;
+}
+.contentDropdown a {
+    display: block;
+    list-style: none;
+    margin: 10px;
+    text-decoration: none;}
+.contentDropdown a:hover {
+    color: blue;
+}
+.tdthaotac:hover .contentDropdown {
+    background-color:aliceblue;
+    display: block;
+    z-index: 1;
+}
+#viewpurchaseorder {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 14px;
+}
+ 
+
+#PODetail tr td:nth-child(1),
+#PODetail tr td:nth-child(3),
+#PODetail tr td:nth-child(4){
+    text-align: center;
+}
+#PODetail tr td:nth-child(5),
+#PODetail tr td:nth-child(6){
+    text-align: right;
+}
+#PODetail tr th:nth-child(3),
+#PODetail tr th:nth-child(4),
+#PODetail tr th:nth-child(5),
+#PODetail tr th:nth-child(6){
+    text-align:center;
+}
+#OrderDateFrom,#OrderDateTo,
+#DeliveryFrom,#DeliveryTo {
+    display: inline;
+}
+
+.divsearch .form-inline input {
+    width: 120px;
+}
+.hidden_tag {
+    display: none;
+}
+#logo {height: 100px;
+    width: 100px;
+  }

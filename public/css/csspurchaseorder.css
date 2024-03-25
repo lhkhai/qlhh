@@ -1,0 +1,95 @@
+.input_masp,.input_soluong,.input_dongia
+{   
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+.input_dongia {
+    text-align: right;
+}
+
+a {
+    display:inline;
+    
+}
+
+.input_soluong {
+    text-align: center;
+}
+.input_soluong_0 {
+    border: 1px solid red;
+}
+#btn_dathang {
+    width: 100px;
+   
+}
+
+#TableProduct {width: 100%;}
+#TableProduct th {text-align: center;}
+#TableProduct th:nth-child(1) {
+    width: 5%;
+} 
+#TableProduct th:nth-child(2),
+#TableProduct th:nth-child(5),
+#TableProduct th:nth-child(6),
+#TableProduct th:nth-child(7)
+ {
+    width: 10%;
+}
+#TableProduct th:nth-child(8)
+ {
+    width: 15%;
+}
+#TableProduct th:nth-child(3)
+ {
+    width: 30%;
+}
+#TableProduct td {
+    padding: 4px;
+}
+
+.thanhtien input {
+    display: inline-block;
+    text-align: right;
+    width: 80%;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+.btnDeleteRow-hide {
+    display: none;
+}
+.btnDeleteRow-show {
+    display: inline-block;
+    height: 20px;
+    min-height: 5px;
+    width: 10%;
+    min-width: 5px;
+    margin-left: 5%;
+    
+}
+.thanhtien img:hover {  
+    height: 25px;
+    width: 12%; 
+    border: 1px solid #555;
+    border-radius: 4px;
+} 
+#logo {height: 100px;
+    width: 100px;
+  }           

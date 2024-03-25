@@ -1,0 +1,85 @@
+.thaotac {width: 100px;}
+.stt {  width: 50px;
+        text-align: center;}
+.divPopup {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #31B0D5;
+    display: none;
+}
+/*Form thông báo */
+.pag_supplier { /* div pagination */
+    position: relative;
+    margin-top: 15px;
+    height: 40px;
+    width: 100%;
+}
+.view_table {max-height: 72%;  /*định chiều cao cho form danh sách*/
+            min-height: 72%;
+            overflow-y: auto;}
+    
+.icon_title {
+    height: 35px;
+    width:35px;
+}
+.div_pagination { /* div pagination */
+    position: relative;
+    margin-top: 5px;
+    height: 40px;
+    width: 100%;
+    
+}
+.div_search{
+    background-color: white;
+}
+.large-image { /*Định dạng hiển thị ảnh lớn trong trang product*/
+  display: none;
+  position: fixed;   
+  width: 30%;
+  height: 30%;    
+  z-index: 999;
+  top: 10%;
+  left: 75%;   
+}
+.large-image img {
+  max-height: 300px;
+  max-width: 300px;
+}
+.perpage{
+    padding-top: 5px;
+    position:absolute;
+    top: 2px;
+    float:left;
+    width:200px;
+    height: 30px; 
+      
+    }
+#perpage {
+    height: 30px;
+    margin-bottom:10px;
+}
+.total_record { 
+        position:absolute;
+        top: 2px;
+        float:left;
+        width:20%;
+        height: 30px;
+        text-align:right;
+        margin-left: 80%;
+        font-weight: bold;
+        padding-top:10px;
+       
+    }
+.container {
+    margin-top:20px;
+}
+.duplicateproduct { /* Cảnh báo khi chọn trùng sản phẩm */
+    background-color: rgb(245, 200, 200);
+}
+.soluong0 {
+    border: 1px solid;
+    box-shadow: 1px 1px 3px 1px red;
+}

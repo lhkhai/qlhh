@@ -1,0 +1,83 @@
+.sub_body { height: calc(100% - 80px);  /*định chiều cao cho form danh sách*/
+   overflow-y: auto;
+}
+.title_table {
+    background-color: #6C757D;
+    color: white;
+    position:sticky;
+    top: -1px;;
+}
+.div_search {
+    height: 50px;
+    width: 100%;
+    
+}
+.tdEditDel {width: 25px;
+border-left: none;}
+
+.title_top {
+    background-color: white;
+    color: blue;
+    height: 60px;
+    font-weight: bold;
+    font-size: large;
+    padding-top: 10px;    
+}
+.title_top span {margin-left: 10px;}
+.title_top input {
+    position: absolute;
+    right: 5px;
+    font-size: medium;
+    font-weight: bold;} /*button thêm*/
+
+tbody {background-color: white;    
+} 
+.form-add {
+    position: relative;
+    width: 40%;
+    height: calc(100% - 45px);
+    left: 30%;
+    top: 30px;
+    background-color: blue;
+}
+.table_empty { height: 20px;
+            width: 100%;
+            color: blue;
+            background-color: yellow;}
+
+.modal-header {
+    background-color: #4d5bf9;
+    color: white;
+}
+.icon_edit, .icon_delete  {width:20px;height:20px;}
+#btnEdit {height: 20px;
+        width: 20px;}
+#btnEdit:hover {background-color:rgb(59, 136, 199) ;}
+.div_search input[name='input_search_masp'],.div_search input[name='input_search_tensp'], 
+.div_search input[name='input_search_nhomsp'],.div_search input[name='input_search_chatlieu']
+{
+    height: 34px;
+    width: 150px;
+    display: inline;
+}
+#formAdd #mota {
+    height: 34px;
+}
+.iconFormAdd {
+    height: 40px;
+    width: 35px;
+    display: inline;
+}
+.modal-title {display: inline;}
+.modal-header {height: 55px;}
+.modal-body {
+    margin: 0;
+    padding-bottom: 0;
+}
+.status_new {height:30px; /* icon sp mới */
+            width:40px;}
+.form_search span {
+    font-weight: bold;
+    margin-left: 10px;
+}
+

@@ -1,0 +1,75 @@
+.list_ncc { height: calc(100% - 80px);  /*định chiều cao cho form danh sách*/
+   
+    overflow-y: auto;}
+.title_table_ncc {
+    background-color: #6C757D;
+    color: white;
+    position:sticky;
+    top: -1px;;
+}
+/*style="background-color: #6C757D;color: white;position:sticky;top:0;"*/
+
+
+#title_ncc {
+    background-color:white;
+    color:black;
+    height: 70px;
+    font-weight: bold;
+    font-size: large;
+    padding-top: 10px;
+    
+}
+#title_ncc span {margin-left: 10px;}
+#title_ncc input {position: fixed;
+right: 20px;
+font-size: medium;
+font-weight: bold;} /*button thêm*/
+.idncc {display: none;} /*An cot ID */
+
+tbody {background-color: white;    
+} 
+.form-add-ncc {
+    position: relative;
+    width: 40%;
+    height: calc(100% - 45px);
+    left: 30%;
+    top: 30px;
+    background-color: blue;
+}
+.table_empty { height: 20px;
+            width: 100%;
+            color: blue;
+            background-color: yellow;}
+/* .pag_supplier {
+        position: relative;
+        margin-top: 15px;
+        height: 40px;
+        width: 100%;
+    }
+ .pagination {
+    width: 60%;
+    height: 40px;
+    margin-top: 2px;
+    margin-left: 15%;  }
+
+
+.total_record {   
+    position: fixed;
+    bottom: 30px;
+    right: 5px;
+    width: 20%;
+    text-align: right;
+    font-weight: bold;
+} */
+/*Modal --popup*/
+.modal-header {
+    background-color: #4d5bf9;
+    color: white;
+}
+.icon_edit, .icon_delete  {width:30px;height:30px;}
+#btnEdit {height: 30;
+        width: 30;}
+#btnEdit:hover {background-color:rgb(59, 136, 199) ;}
+
+
+
