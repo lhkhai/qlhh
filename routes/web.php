@@ -56,14 +56,20 @@ Route::get('/listinvoice/search',[ListInvoiceController::class,'SearchPI']);
 
 Route::get('/sales',[SaleInvoiceController::class,'index']);
 Route::get('/listsaleinvoice/search',[ListSaleInvoiceController::class,'searchSaleInvoice']);
+Route::get('/listsaleinvoice',[ListSaleInvoiceController::class,'index']);
 
-Route::get('/promotion',[PromotionController::class,'index']);
+Route::get('/promotion',[PromotionController::class,'index'])->name('promotion');
+Route::post('/addpromotion',[PromotionController::class,'addpromotion']);
 
 Route::get('/viewcss',function(){
 
     return view('viewcss');
 });
-Route::get('/listsaleinvoice',[ListSaleInvoiceController::class,'index']);
+
+
+
+
+
 Route::get('/report',function(){
     return view('baocaothongke.report');
 });

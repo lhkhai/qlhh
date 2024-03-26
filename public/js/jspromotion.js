@@ -20,35 +20,22 @@ function event_promotion(){ //Tùy theo loại khuyến mãi sẽ hiển thị f
         $("#dskhuyenmai").empty();
     }
     document.getElementById('dskhuyenmai').innerHTML = data.innerHTML;
-}
-function viewpromotion(id) 
+}   
+$(document).ready(function(){
+        $("#txtloaikm").on('change',function(){
+            var loaikm = $("#txtloaikm").val();
+            if(loaikm ==2){
+                $("#modalKMSP").appendTo("body");
+            }
+        });  
+});
+
+
+function viewpromotion() 
 {
     $('#viewpromotion').appendTo("body");
 }
-// function InfoProduct(masp)
-// {
-    
-//     var masp = $(masp).val();
-//     let indextr = $(masp).closest('tr').index();
-//     $.ajax({
-//         type: 'GET',
-//         url: 'api/product/pdinfo/' + masp,
-//         success: function(response){
-//             $.each(response.product, function(key,value){
-//                 let currentrow = $("tbodypromotion tr").eq(indextr);
-//                 currentrow.attr('dataid',value.id);
-//                 currentrow.find('td').eq(0).text(key+1);
-//                 currentrow.find('td').eq(2).text(value.tensp);
-//                 currentrow.find('td').eq(3).text(value.donvi);
-//             });
-//         }
-        
-//     });
-//     $("#tbodypromotion tr:last").clone('true').appendTo("#tbodypromotion");
-//     LoadIndex();
-    
-    
-// }
+
 function xoadong(link)
 {
    
@@ -139,6 +126,6 @@ function LoadProduct(index)
 } 
 $(document).ready(function()
 {
-    $("#SavePromotion").on('click',function(){alert('gọi hàm lưu');});
+   // $("#SavePromotion").on('click',function(){alert('gọi hàm lưu');});
     
 });

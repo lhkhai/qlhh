@@ -40,18 +40,23 @@
                         </select>
                     </div>
                     <div class='col-sm-2'>
-                        <button class='btn btn-primary' style='margin-top:25px;' id='btn_search'><i class='fa fa-search' style='color: white'> Tìm kiếm</i></button>
+                        <button class='btn btn-info' style='margin-top:25px;' id='btn_search'><i class='fa fa-search' style='color: white'> Tìm kiếm</i></button>
                     </div>
             </div>
-        </form>    
+        </form>  
+        <div><button style="width: 80px;height:35px;margin-top:25px;float:right;" onclick="ShowModal('viewpromotion')" type="button" data-toggle="modal" data-target="#viewpromotion"  class="btn btn-primary" title="Thêm" ><i class='fa fa-plus' style='font-size:16px;color: white'> Thêm</i></button></div>  
     </div>
     <div class='viewtable'>
+    @isset($message)
+                    <script>alert('Loại khuyến mãi: ' + "{{$message}}")</script>
+                    @endif
         <table class="table table-bordered" id='view_listpromotion'>
             <thead style='background-color:#6c757d;color:white;'>
                 <tr><th>STT</th><th>Mã CTKM</th><th>Tên CTKM</th><th>Loại KM</th><th>Ngày Bắt đầu</th><th>Ngày Kết thúc</th><th>Người tạo</th><th>Thao tác</th></tr>
             </thead>
             <tbody style="background-color:white;">
-                @isset($dataview)
+                @isset($dataview)                  
+                   
                     @foreach($dataview as $key=>$value)                    
                         <tr dataid='{{$value->id}}'><td>{{$key+1}}</td><td>{{$value->mactkm}}</td><td>{{$value->tenctkm}}</td><td>{{$value->tenloaikm}}</td>
                         <td>{{Date('d/m/Y',strtotime($value->ngaybd))}}</td><td>{{Date('d/m/Y',strtotime($value->ngaykt))}}</td>                        
@@ -75,7 +80,7 @@
 </div>
 
 <div class="modal fade" id="viewpromotion" role="dialog">
-    <form id='eventpromotion' method='POST' action='#' enctype='multipart/form-data'>
+    <form id='eventpromotion' method='POST' action='{{asset("addpromotion")}}' enctype='multipart/form-data'>
         @csrf
     <div class="modal-dialog modal-lg" id='promotiondetail' style='height:90%;'>
       <div class="modal-content">
@@ -87,8 +92,8 @@
             <div class='form-group row'>
                 <label style='text-align:right;' class="col-md-2 form-control-label text-md-right" for="code">Loại KM <span class="text-danger">*</span></label>
                 <div class="col-md-4"  style=''>
-                    <select name='txtloaikm' id='txtloaikm' class='form-control' onchange='event_promotion()'>
-                        <option value=0>Chọn loại khuyến mãi</option>
+                    <select name='txtloaikm' id='txtloaikm' required="" class='form-control' onchange='event_promotion()'>
+                        <option value=''>Chọn loại khuyến mãi</option>
                         @foreach($promotiontype as $val)
                         <option value="{{$val->id}}">{{$val->tenloaikm}}</option>
                         @endforeach
@@ -97,25 +102,25 @@
             </div> 
             <div class="form-group row">                               
                 <label style='text-align:right;' class="col-md-2 form-control-label text-md-right" for="code">Mã CTKM <span class="text-danger">*</span></label>
-                <div class="col-md-4"  style=''><input type="text" name='txtmactkm' id='txtmactkm' class="form-control" required="" placeholder="Mã dịch vụ" > 
+                <div class="col-md-4"  style=''><input type="text" name='txtmactkm' id='txtmactkm' class="form-control" required="" placeholder="Mã dịch vụ" value='KMThang3' > 
                 </div>
                 <label style='text-align:right;' class="col-md-2 form-control-label text-md-right" for="code">Tên CTKM <span class="text-danger">*</span></label>
-                <div class="col-md-4"  style=''><input name='txttenctkm' id='txttenctkm' type="text" class="form-control" required="" placeholder="Mã dịch vụ" > 
+                <div class="col-md-4"  style=''><input name='txttenctkm' id='txttenctkm' type="text" class="form-control" required="" placeholder="Mã dịch vụ" value='Chương trình khuyến mãi tháng 3' > 
                 </div> 
             </div>
             <div class='form-group row'>
                 <label style='text-align:right;' class="col-md-2 form-control-label text-md-right" for="code">Ngày bắt đầu <span class="text-danger">*</span></label>
-                <div class="col-md-4"  style=''><input type="date" name='txtngaybd' id='txtngaybd' class="form-control" required="" placeholder="Mã dịch vụ" > 
+                <div class="col-md-4"  style=''><input type="date" name='txtngaybd' id='txtngaybd' class="form-control" required="" value='2024-03-26'> 
                 </div>
                 <label style='text-align:right;' class="col-md-2 form-control-label text-md-right" for="code">Ngày kết thúc <span class="text-danger">*</span></label>
-                <div class="col-md-4"  style=''><input type= 'date' name='txtngaykt' id='txtngaykt' type="text" class="form-control" required="" placeholder="Mã dịch vụ" > 
+                <div class="col-md-4"  style=''><input type= 'date' name='txtngaykt' id='txtngaykt' type="text" class="form-control" required="True" value='2024-03-26' > 
                 </div>
             </div>
             <div class='form-group row'>
                 <label class="col-md-2 form-control-label text-md-right" style='text-align:right;'>Trạng thái</label>
                 <div class="col-md-4">
                     <label class='switch'>
-                        <input type='checkbox' id='checkbox'>
+                        <input name ='txttrangthai' type='checkbox' checked id='txttrangthai'>
                         <span class='slider'><span style='float:left;'>OFF</span><span style='float:right;margin-right:5px;'>ON</span></span>
                     </label>
                 </div>

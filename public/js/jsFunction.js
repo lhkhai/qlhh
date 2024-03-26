@@ -147,9 +147,9 @@ function currentDay ()
         return today;
     };
 
-function OpenModal(namemodal)
+function ShowModal(namemodal)
     {
-       $(namemodal).appendTo("body");
+       $("#" + namemodal).appendTo("body");
     }
 
 
